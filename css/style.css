@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #eff2ff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.list {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list h1 {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.input-form label {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.input-form input {
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: 1px solid #d0d0d0;
+  background: #ffffff;
+  flex: 1;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.input-form button {
+  padding: 15px 20px;
+  border-radius: 15px;
+  background: #3152ff;
+  color: #ffffff;
+  border: 1px solid #3152ff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.input-form button:hover {
+  background: #2042e0;
+}
+
+.task-container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 300px;
+}
+
+#task-list {
+  list-style-type: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid #eff2ff;
+  background: #ffffff;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-text {
+  font-size: 18px;
+  background: #ffffff;
+}
+
+.task-date {
+  font-size: 14px;
+  color: #666;
+  background: #ffffff;
+  margin-left: 10px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  background: #ffffff;
+}
+
+.delete-btn {
+  background: #ff3131;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #31a2ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #999;
+  font-size: 18px;
+  background: #ffffff;
+}
+
+/* 拖曳排序相關樣式 */
+.sortable-ghost {
+  opacity: 0.6;
+  background: #f0f4ff !important;
+}
+
+.sortable-chosen {
+  background: #f0f8ff;
+}
+
+.sortable-drag {
+  opacity: 0.8;
+}
+
+/* 讓任務項目看起來可拖動 */
+.task-content {
+  cursor: grab;
+}
+
+.task-content:active {
+  cursor: grabbing;
+}
+
+/* 添加一個拖動效果提示 */
+.task-content::before {
+  content: "≡";
+  margin-right: 8px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .input-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-form input {
+    width: 100%;
+  }
+
+  .list h1 {
+    font-size: 48px;
+  }
+
+  .input-form label {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待辦事項清單</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="list">
+      <h1>Todo List</h1>
+      <div class="container">
+        <form id="task-form" class="input-form">
+          <label for="task-input">任務</label>
+          <input
+            type="text"
+            id="task-input"
+            placeholder="請輸入你的任務名稱"
+            required
+          />
+          <label for="date-input">日期</label>
+          <input type="date" id="date-input" required />
+          <button id="add-task-btn" type="submit">Add Task</button>
+        </form>
+      </div>
+      <div class="task-container">
+        <ul id="task-list">
+          <!-- 任務將由JavaScript添加 -->
+        </ul>
+        <div id="empty-state" class="empty-state">趕緊建立你的任務吧！</div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/list.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+</html>
